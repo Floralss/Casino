@@ -166,7 +166,7 @@
     </div>
 
     <script>
-        // Твои ключи доступа
+        // Твои ключи доступа (всегда пиши их здесь БОЛЬШИМИ буквами)
         const validKeys = [
             "NIVER-A1B2-C3D4",
             "NIVER-E5F6-G7H8",
@@ -183,7 +183,8 @@
 
         // Функция проверки введенного ключа
         function checkKey() {
-            const input = document.getElementById('key-input').value.trim();
+            // .trim() убирает случайные пробелы по бокам, а .toUpperCase() делает все буквы БОЛЬШИМИ
+            const input = document.getElementById('key-input').value.trim().toUpperCase();
             
             if (validKeys.includes(input)) {
                 localStorage.setItem('auth_success', 'true');
